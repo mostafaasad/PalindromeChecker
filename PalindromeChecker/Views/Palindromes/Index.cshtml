@@ -1,0 +1,27 @@
+﻿@model IEnumerable<PalindromeChecker.Models.Palindrome>
+
+@{
+    ViewBag.Title = "List of Palindormes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @item.Text
+        </td>
+        
+    </tr>
+}
+
+</table>
